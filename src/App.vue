@@ -77,7 +77,7 @@ export default {
 
   .teamName1, .teamName2 {
     display: flex;
-    position: fixed;
+    position: absolute;
     width: 280px;
     flex: 1;
   }
@@ -118,6 +118,7 @@ export default {
     @media (max-width: 880px) {
       display: flex;
       flex-direction: column;
+      font-size: 100px;
 
       bottom: 0; 
     }
@@ -145,15 +146,17 @@ export default {
     gap: 24px;
     
     width: 100%;
-    bottom: 12px;
+    bottom: 18px;
     @media (max-width: 880px){
       flex-direction: column;
-
-      height: 100vh;
+      align-self: flex-end;
+      justify-content: center;
       
-      margin-top: 32px;
+      height: 100vh;
+      width: 64px;
+
+      top: 4vh;
       bottom: unset;      
-      left: 10px;
     }
   }
 
@@ -164,17 +167,17 @@ export default {
     text-transform: uppercase;
     color: var(--team2);
 
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
 
     padding: 0;
     border: none;
     border-radius: 50%;
 
     @media (max-width: 880px){
-      width: 53px;
-      height: 53px;
-      font-size: 12px;
+      width: 43px;
+      height: 43px;
+      font-size: 10px;
       color: var(--team2);
   }
 }

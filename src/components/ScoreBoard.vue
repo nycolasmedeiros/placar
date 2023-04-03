@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div :class="$style.teamNameContainer">
+        <div>
             <span v-if="!isTeamNameToggled" :class="$style.teamName" @click="showTeamNameInput()">{{ teamName }}</span>
             <input v-else paceholder="Nome do Time" ref="teamName" :class="$style.teamName" @blur="isTeamNameToggled = !isTeamNameToggled" @input="(e) => teamName = e.target.value" />
         </div>
@@ -29,7 +29,7 @@
         data() {
             return {
                 isTeamNameToggled: false,
-                teamName: "Nome do time"
+                teamName: "Nome"
             }
         },
         methods:{
@@ -61,12 +61,10 @@
 
 .teamName {
     font-size: 40px;
+    top: 10px;
     background-color: transparent;
 }
 
-.teamNameContainer{
-    top: 0;
-}
 .scoreCount {
     display: flex;
     flex-direction: row;
