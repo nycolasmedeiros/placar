@@ -171,10 +171,10 @@ export default {
     border: none;
     border-radius: 50%;
 
-    @media (min-width: 880px){
-      width: 83px;
-      height: 83px;
-      font-size: 18px;
+    @media (max-width: 880px){
+      width: 53px;
+      height: 53px;
+      font-size: 12px;
       color: var(--team2);
   }
 }
